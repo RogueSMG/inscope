@@ -13,6 +13,6 @@ do
 	IP=$(dig +short $i)
 	if [[ ! -z $IP ]] && grep -q "$IP" $SCOPE
 	then
-		echo $i | tee -a inscope_domains.txt
+		echo $i | anew inscope_domains.txt
 	fi
 done
